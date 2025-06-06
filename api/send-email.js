@@ -8,7 +8,7 @@ const upload = multer({ storage: multer.memoryStorage() });
 module.exports = async (req, res) => {
   // Enable CORS
   const corsMiddleware = cors({
-    origin: ['http://localhost:3000', 'https://nfe-web-inky.vercel.app', 'https://your-hostinger-domain.com'],
+    origin: '*',
     methods: ['POST'],
     allowedHeaders: ['Content-Type'],
   });
